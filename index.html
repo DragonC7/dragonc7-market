@@ -159,5 +159,59 @@
      💬 Me contacter sur WhatsApp
   </a>
 </section>
+/* Couleurs principales */
+:root {
+  --color-principal: #FF6F61;   /* Rouge orangé pour boutons et titres */
+  --color-secondaire: #4CAF50;  /* Vert pour accents et hover */
+  --color-fond: #F5F5F5;        /* Gris clair pour le fond */
+  --color-texte: #333333;       /* Texte sombre pour lisibilité */
+  --color-lien: #1E88E5;        /* Bleu pour liens */
+}
+
+/* Style général */
+body {
+  background-color: var(--color-fond);
+  color: var(--color-texte);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-principal);
+}
+
+/* Liens */
+a {
+  color: var(--color-lien);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-secondaire);
+}
+
+/* Boutons */
+button, .btn {
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--color-secondaire);
+}
+
+/* Sections */
+section {
+  padding: 20px;
+  margin: 10px 0;
+}
+
 
 
