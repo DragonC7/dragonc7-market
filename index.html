@@ -213,5 +213,80 @@ section {
   margin: 10px 0;
 }
 
+/* Couleurs principales */
+:root {
+  --color-principal: #FF3D00;   /* Rouge nari pour boutons et titres */
+  --color-secondaire: #FFEA00;  /* Jaune vif pour accents et hover */
+  --color-fond: #1E1E1E;        /* Gris foncé / noir pour fond */
+  --color-texte: #FFFFFF;       /* Texte blanc pour lisibilité */
+  --color-lien: #00E5FF;        /* Bleu électrique pour liens */
+}
+
+/* Style général */
+body {
+  background-color: var(--color-fond);
+  color: var(--color-texte);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-principal);
+  transition: color 0.3s;
+}
+
+h1:hover, h2:hover, h3:hover {
+  color: var(--color-secondaire);
+}
+
+/* Liens */
+a {
+  color: var(--color-lien);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color-secondaire);
+}
+
+/* Boutons */
+button, .btn {
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--color-secondaire);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* Sections */
+section {
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+/* Images */
+img {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
 
 
