@@ -1,177 +1,102 @@
+/* ---------- التصميم العام ---------- */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #0b0b0b;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   color: #fff;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-nav {
-  background: #111;
-  padding: 15px 0;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 20px;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #ff0000;
-}
-/* Couleurs principales */
-:root {
-  --color-principal: #FF3D00;   /* Rouge nari pour boutons et titres */
-  --color-secondaire: #FFEA00;  /* Jaune vif pour accents et hover */
-  --color-fond: #1E1E1E;        /* Gris foncé / noir pour fond */
-  --color-texte: #FFFFFF;       /* Texte blanc pour lisibilité */
-  --color-lien: #00E5FF;        /* Bleu électrique pour liens */
-}
-
-/* Style général */
-body {
-  background-color: var(--color-fond);
-  color: var(--color-texte);
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
-/* Titres */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--color-principal);
-  transition: color 0.3s;
+/* ---------- شريط التنقل ---------- */
+nav {
+  background-color: #111;
+  padding: 15px;
+  border-top: 3px solid red;
 }
 
-h1:hover, h2:hover, h3:hover {
-  color: var(--color-secondaire);
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
 }
 
-/* Liens */
-a {
-  color: var(--color-lien);
+nav ul li a {
   text-decoration: none;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: var(--color-secondaire);
-}
-
-/* Boutons */
-button, .btn {
-  background-color: var(--color-principal);
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  cursor: pointer;
-  border-radius: 8px;
+  color: cyan;
+  font-size: 18px;
   font-weight: bold;
-  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  transition: 0.3s;
 }
 
-button:hover, .btn:hover {
-  background-color: var(--color-secondaire);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+nav ul li a:hover {
+  color: #ff4444;
 }
 
-/* Sections */
-section {
+/* ---------- المحتوى الرئيسي ---------- */
+main {
+  padding: 40px 20px;
+}
+
+/* ---------- صفحة المنتجات ---------- */
+.produits {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.produit {
+  background: rgba(255, 255, 255, 0.1);
   padding: 20px;
-  margin: 10px 0;
   border-radius: 10px;
+  width: 220px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
 }
 
-/* Images */
-img {
-  transition: transform 0.3s, box-shadow 0.3s;
-  border-radius: 10px;
-}
-
-img:hover {
+.produit:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-/* Couleurs principales */
-:root {
-  --color-principal: #FF3D00 !important;   /* Rouge nari pour boutons et titres */
-  --color-secondaire: #FFEA00 !important;  /* Jaune vif pour accents et hover */
-  --color-fond: #1E1E1E !important;        /* Gris foncé / noir pour fond */
-  --color-texte: #FFFFFF !important;       /* Texte blanc pour lisibilité */
-  --color-lien: #00E5FF !important;        /* Bleu électrique pour liens */
 }
 
-/* Style général */
-body {
-  background-color: var(--color-fond) !important;
-  color: var(--color-texte) !important;
-  font-family: Arial, sans-serif !important;
-  margin: 0 !important;
-  padding: 0 !important;
+.produit img {
+  width: 100%;
+  border-radius: 10px;
 }
 
-/* Titres */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--color-principal) !important;
-  transition: color 0.3s !important;
+/* ---------- صفحة التواصل ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-h1:hover, h2:hover, h3:hover {
-  color: var(--color-secondaire) !important;
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
-/* Liens */
-a {
-  color: var(--color-lien) !important;
-  text-decoration: none !important;
-  transition: color 0.3s !important;
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: cyan;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-a:hover {
-  color: var(--color-secondaire) !important;
-}
-
-/* Boutons */
-button, .btn {
-  background-color: var(--color-principal) !important;
-  color: white !important;
-  border: none !important;
-  padding: 12px 25px !important;
-  cursor: pointer !important;
-  border-radius: 8px !important;
-  font-weight: bold !important;
-  transition: background 0.3s, transform 0.2s, box-shadow 0.2s !important;
-}
-
-button:hover, .btn:hover {
-  background-color: var(--color-secondaire) !important;
-  transform: translateY(-3px) !important;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3) !important;
-}
-
-/* Sections */
-section {
-  padding: 20px !important;
-  margin: 10px 0 !important;
-  border-radius: 10px !important;
-}
-
-/* Images */
-img {
-  transition: transform 0.3s, box-shadow 0.3s !important;
-  border-radius: 10px !important;
-}
-
-img:hover {
-  transform: scale(1.05) !important;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+button:hover {
+  background: #ff4444;
+  color: white;
 }
